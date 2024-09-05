@@ -1,10 +1,7 @@
 package com.poo.banco;
 
 
-import com.poo.banco.entities.Account;
-import com.poo.banco.entities.Adress;
-import com.poo.banco.entities.Client;
-import com.poo.banco.entities.CurrentAccount;
+import com.poo.banco.entities.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -39,13 +36,38 @@ public class BancoApplication {
 
 
 
-		/* CurrentAccount currentAccount = new CurrentAccount("Current", client1, "1000-0",
+		/* CurrentAccount currentAccount1 = new CurrentAccount("Current", client1, "1000-0",
 				CurrentAccount.counterId, 1000.0, new Date(), 'A', "Active");
 
 		currentAccount.showAccountData();
 		currentAccount.showBalance(); */
+		LocalDate localDate2 = LocalDate.of(1973, 10, 23);
+		Date date2 = Date.from(localDate1.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		Adress adr2 = new Adress(Adress.counterId, "Nogueira", 1172, "Casa C", "Petrópolis",
+				"Rio de Janeiro", "25712-123");
 
+		Manager generalManager1= new Manager(Manager.counterId, "Paulo Henrique",
+				"765.234.543-09",
+				date2,
+				"PauloH123",
+				"Paulh@1!",
+				adr2,
+				"pauloh@gmail.com",
+				"(24) 992438712",
+				"117523",
+				new Date(),
+				4000.0);
+		generalManager1.doubleSalary();
 
+		Adress adrAgency = new Adress(Adress.counterId, "Estrada União Industria", 11000,
+				"Itaipava", "Petrópolis",
+				"Rio de Janeiro", "25730-735");
+
+		Agency agency1 = new Agency(Agency.counterId, "Banco do Brasil",
+				"100-0", generalManager1, "(24) 2222-3200",
+				adrAgency);
 	}
+
+
 
 }

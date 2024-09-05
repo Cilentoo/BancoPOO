@@ -6,16 +6,16 @@ public class Manager extends Person{
     private String registration;
     private Date promotionDate;
     private double salary;
-    private Agency agency;
+
 
     public Manager(int id, String name, String cpf, Date birthDate, String login, String password, Adress adress, String mail, String telephoneNumber,
-                   String registration, Date promotionDate, double salary, Agency agency) {
+                   String registration, Date promotionDate, double salary) {
 
         super(id, name, cpf, birthDate, login, password, adress, mail, telephoneNumber);
         this.registration = registration;
         this.promotionDate = promotionDate;
         this.salary = salary;
-        this.agency = agency;
+
     }
 
     public String getRegistration() {
@@ -42,14 +42,9 @@ public class Manager extends Person{
         this.salary = salary;
     }
 
-    public Agency getAgency() {
-        return agency;
-    }
-
-    public void setAgency(Agency agency) {
-        this.agency = agency;
-    }
     public void doubleSalary() {
         this.salary *= 2;
     }
+
+
 }

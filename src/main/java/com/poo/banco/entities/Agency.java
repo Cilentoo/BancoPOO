@@ -21,6 +21,13 @@ public class Agency {
         this.adress = adress;
     }
 
+    public Agency(){
+        this.id = counterId;
+        counterId++;
+        this.number = (counterNumber + "-0");
+        counterNumber++;
+    }
+
     public int getId() {
         return id;
     }
