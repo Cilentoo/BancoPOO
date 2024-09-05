@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Account {
-    public static int counterId = 0;
+    public static int counterId = 1;
     public static int counterNumber = 1000;
 
     private int id;

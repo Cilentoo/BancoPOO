@@ -3,7 +3,7 @@ package com.poo.banco.entities;
 import java.util.Date;
 
 public class Person {
-    public static int counterId = 0;
+    public static int counterId = 1;
     private int id;
     private String name;
     private String cpf;
