@@ -46,5 +46,13 @@ public class Manager extends Person{
         this.salary *= 2;
     }
 
-
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "registration='" + registration + '\'' +
+                ", promotionDate=" + promotionDate +
+                ", salary=" + salary +
+                ", adress=" + adress +
+                '}';
+    }
 }
