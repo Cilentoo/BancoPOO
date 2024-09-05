@@ -49,8 +49,7 @@ public class Manager extends Person{
     public void setAgency(Agency agency) {
         this.agency = agency;
     }
-
-    public void doubleSalary(){
-        this.salary *=2;
+    public void doubleSalary() {
+        this.salary *= 2;
     }
 }
