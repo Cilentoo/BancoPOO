@@ -23,7 +23,7 @@ public class BancoApplication {
 
 		Client client1 = new Client(Client.counterId,
 				"Eduardo Cilento",
-				"176.270.067-08",
+				"17627006708",
 				date1,
 				"eduardo.cilento",
 				"1245@!M",
@@ -36,7 +36,7 @@ public class BancoApplication {
 
 
 
-		CurrentAccount currentAccount1 = new CurrentAccount("Current", client1, "1000-0",
+		Account currentAccount1 = new CurrentAccount("Current", client1, "1000-0",
 				CurrentAccount.counterId, 1000.0, new Date(), 'A', "Active");
 
 		currentAccount1.showAccountData();
@@ -48,7 +48,7 @@ public class BancoApplication {
 				"Rio de Janeiro", "25712-123");
 
 		Manager generalManager1= new Manager(Manager.counterId, "Paulo Henrique",
-				"765.234.543-09",
+				"76523454309",
 				date2,
 				"PauloH123",
 				"Paulh@1!",

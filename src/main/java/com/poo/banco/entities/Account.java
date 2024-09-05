@@ -3,7 +3,7 @@ package com.poo.banco.entities;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-public class Account {
+public abstract class Account {
     public static int counterId = 1;
     public static int counterNumber = 1000;
 

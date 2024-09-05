@@ -2,7 +2,7 @@ package com.poo.banco.entities;
 
 import java.util.Date;
 
-public class Person {
+public abstract class Person {
     public static int counterId = 1;
     private int id;
     private String name;
@@ -55,7 +55,11 @@ public class Person {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+        if (cpf == null || cpf.isEmpty() || !isValidCPF(cpf)){
+            System.out.println("Invalid Cpf number!");
+        }else {
+            this.cpf = cpf;
+        }
     }
 
     public Date getBirthDate() {
@@ -104,6 +108,14 @@ public class Person {
 
     public void setTelephoneNumber(String telephoneNumber) {
         this.telephoneNumber = telephoneNumber;
+    }
+
+    private boolean isValidCPF(String cpf) {
+        if (cpf.length() != 11) {
+            return false;
+        }else {
+            return true;
+        }
     }
 
 }
