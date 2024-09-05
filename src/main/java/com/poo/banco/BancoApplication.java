@@ -1,8 +1,10 @@
 package com.poo.banco;
 
 
+import com.poo.banco.entities.Account;
 import com.poo.banco.entities.Adress;
 import com.poo.banco.entities.Client;
+import com.poo.banco.entities.CurrentAccount;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -33,7 +35,16 @@ public class BancoApplication {
 				"(24)992568756"
 		);
 
-		client1.showRecord();
+		//client1.showRecord();
+
+
+
+		/* CurrentAccount currentAccount = new CurrentAccount("Current", client1, "1000-0",
+				CurrentAccount.counterId, 1000.0, new Date(), 'A', "Active");
+
+		currentAccount.showAccountData();
+		currentAccount.showBalance(); */
+
 
 	}
 

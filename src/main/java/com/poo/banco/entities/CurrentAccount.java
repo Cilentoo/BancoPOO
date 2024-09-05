@@ -9,6 +9,14 @@ public class CurrentAccount extends Account{
         super(type, owner, number, id, balance, openingDate, classfication, status);
     }
 
+    public CurrentAccount() {
+        this.setId(counterId);
+        counterId ++;
+
+        this.setNumber(counterNumber + "-0");
+        counterNumber++;
+    }
+
     @Override
     public void showAccountData() {
         System.out.println("Current account: \n");
